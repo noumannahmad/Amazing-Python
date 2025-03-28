@@ -90,7 +90,7 @@ python imiomicsVideos.py \
 
 ### Output
 
-- Saves `BMI_axial.mp4`, `BMI_coronal.mp4` in output directory
+- Saves `BMI_axial.avi`, `BMI_coronal.avi` in output directory
 
 ---
 
