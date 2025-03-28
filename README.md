@@ -121,7 +121,7 @@ python regression.py \
 
 ## 🗒️ Generate Shell Scripts – `writeShell.py`
 
-Automate shell script creation for regression jobs on clusters like Bianca.
+Automate shell script creation for regression jobs on clusters like Bianca(Super Computer).
 
 - Reads subject IDs, variable files
 - Generates `.sh` files with `regression.py` commands
