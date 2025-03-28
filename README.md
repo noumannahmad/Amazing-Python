@@ -30,7 +30,7 @@ pip install numpy matplotlib nibabel scipy
 
 ## 🖼 Generate Collages – `collage_Imiomics.py`
 
-Create comparison collages of Imiomics maps (Jacobian, fat fraction, correlation, regression) across groups.
+Once you have completed the regression analysis and obtained the NRRD files for Jacobian and Fat Fraction maps for both male and female subjects, you can generate comparative collages of Imiomics maps (e.g., Jacobian, fat fraction, correlation, regression) across groups.
 
 ### Command
 
