@@ -28,6 +28,62 @@ pip install numpy matplotlib nibabel scipy
 
 ---
 
+## 📊 Voxel-wise Regression – `regression.py`
+
+Run linear/logistic regression on Imiomics maps for each voxel using subject metadata.
+
+### Command
+
+```bash
+python regression.py \
+  -fn Jac_M.nrrd \
+  -grp_n male \
+  -var_f age.txt \
+  -ids_f ids.txt \
+  -out results/beta_age_male.vtk \
+  -mask bodymask.vtk \
+  -compute run
+```
+
+### Output
+
+- NRRD maps for:
+  - Regression coefficients (intercept, main variable, covariates)
+  - P-values
+  - R² fit map
+
+---
+
+
+## 🗒️ Generate Shell Scripts – `writeShell.py`
+
+Automate shell script creation for regression jobs on clusters like Bianca(Super Computer).
+
+- Reads subject IDs, variable files
+- Generates `.sh` files with `regression.py` commands
+
+---
+
+
+## 🔧 Helper Scripts
+
+### `helper_collage.py`
+- Locates and returns map files in male/female folders
+- Organizes files as `[Jac_M, Jac_F, Fat_M, Fat_F]`
+
+### `videoHelper.py`
+- Generates title image with metadata
+- Includes map type, subject counts, and R² indicator
+
+### `getParameterFiles.py`
+- Combines and sorts multiple ID and value arrays
+- Returns aligned, sorted inputs for regression
+
+---
+
+
+---
+
 ## 🖼 Generate Collages – `collage_Imiomics.py`
 
 Once you have completed the regression analysis and obtained the NRRD files for Jacobian and Fat Fraction maps for both male and female subjects, you can generate comparative collages of Imiomics maps (e.g., Jacobian, fat fraction, correlation, regression) across groups.
@@ -90,58 +146,6 @@ python imiomicsVideos.py \
 ### Output
 
 - Saves `BMI_axial.avi`, `Liver_SNP.avi` in output directory
-
----
-
-## 📊 Voxel-wise Regression – `regression.py`
-
-Run linear/logistic regression on Imiomics maps for each voxel using subject metadata.
-
-### Command
-
-```bash
-python regression.py \
-  -fn Jac_M.nrrd \
-  -grp_n male \
-  -var_f age.txt \
-  -ids_f ids.txt \
-  -out results/beta_age_male.vtk \
-  -mask bodymask.vtk \
-  -compute run
-```
-
-### Output
-
-- NRRD maps for:
-  - Regression coefficients (intercept, main variable, covariates)
-  - P-values
-  - R² fit map
-
----
-
-## 🗒️ Generate Shell Scripts – `writeShell.py`
-
-Automate shell script creation for regression jobs on clusters like Bianca(Super Computer).
-
-- Reads subject IDs, variable files
-- Generates `.sh` files with `regression.py` commands
-
----
-
-## 🔧 Helper Scripts
-
-### `helper_collage.py`
-- Locates and returns map files in male/female folders
-- Organizes files as `[Jac_M, Jac_F, Fat_M, Fat_F]`
-
-### `videoHelper.py`
-- Generates title image with metadata
-- Includes map type, subject counts, and R² indicator
-
-### `getParameterFiles.py`
-- Combines and sorts multiple ID and value arrays
-- Returns aligned, sorted inputs for regression
-
 ---
 
 ## 🔄 Full Example Workflow
