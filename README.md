@@ -15,7 +15,6 @@ This repository provides tools to **analyze, visualize, and generate collages an
 | `helper_collage.py` | Helper to retrieve and organize map files for collage generation |
 | `videoHelper.py` | Generate title images with metadata for collages/videos |
 | `getParameterFiles.py` | Align and merge subject IDs and variable arrays |
-| `README.md` | Project documentation |
 
 ---
 
@@ -90,7 +89,7 @@ python imiomicsVideos.py \
 
 ### Output
 
-- Saves `BMI_axial.avi`, `BMI_coronal.avi` in output directory
+- Saves `BMI_axial.avi`, `Liver_SNP.avi` in output directory
 
 ---
 
