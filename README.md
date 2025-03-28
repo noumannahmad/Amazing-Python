@@ -8,7 +8,6 @@ This repository provides tools to **analyze, visualize, and generate collages an
 
 | File | Description |
 |------|-------------|
-
 | `regression.py` | Voxel-wise linear/logistic regression to produce statistical NRRD maps |
 | `writeShell.py` | Generate shell scripts to run batch regression jobs |
 | `helper_collage.py` | Helper to retrieve and organize map files for collage generation |
