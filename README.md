@@ -8,13 +8,14 @@ This repository provides tools to **analyze, visualize, and generate collages an
 
 | File | Description |
 |------|-------------|
-| `collage_Imiomics.py` | Generate PNG collages from Imiomics statistical maps |
-| `imiomicsVideos.py` | Create axial and coronal videos (.avi) of Imiomics maps |
+
 | `regression.py` | Voxel-wise linear/logistic regression to produce statistical NRRD maps |
 | `writeShell.py` | Generate shell scripts to run batch regression jobs |
 | `helper_collage.py` | Helper to retrieve and organize map files for collage generation |
 | `videoHelper.py` | Generate title images with metadata for collages/videos |
 | `getParameterFiles.py` | Align and merge subject IDs and variable arrays |
+| `collage_Imiomics.py` | Generate PNG collages from Imiomics statistical maps |
+| `imiomicsVideos.py` | Create axial and coronal videos (.avi) of Imiomics maps |
 
 ---
 
