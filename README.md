@@ -153,7 +153,7 @@ python collage_Imiomics.py -i maps/ -f mri_masks/ -s small -v BMI
 
 # Generate videos
 python imiomicsVideos.py \
-  -m "maps/male/beta1_BMI_Jac_M.nrrd,maps/female/beta1_BMI_Jac_F.nrrd,maps/male/beta1_BMI_Fat_M.nrrd,maps/female/beta1_BMI_Fat_F.nrrd" \
+  -m "maps/male/beta1_Multiple_Jac_M.nrrd,maps/female/beta1_Multiple_Jac_F.nrrd,maps/male/beta1_Multiple_Fat_M.nrrd,maps/female/beta1_Multiple_Fat_F.nrrd" \
   -b "masks/male.vtk,masks/female.vtk" \
   -r "ref/male_water.nrrd,ref/male_fat.nrrd,ref/female_water.nrrd,ref/female_fat.nrrd" \
   -v BMI -f 1 -o output/
