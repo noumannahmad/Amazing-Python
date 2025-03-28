@@ -1,6 +1,6 @@
 # Imiomics Visualization and Analysis Toolkit
 
-This repository provides tools to **analyze, visualize, and generate collages and videos** from *Imiomics statistical maps*, enabling voxel-wise anatomical insights from MRI data. It supports regression analysis, multiple comparison correction, reference alignment, and publication-ready outputs in both image and video formats.
+This repository provides tools to **analyze, visualize, and generate collages and videos** from *Imiomics statistical maps*, enabling voxel-wise anatomical insights from MRI data. It supports regression analysis, multiple comparison correction, reference alignment, and imiomics collages outputs in both image and video formats.
 
 ---
 
