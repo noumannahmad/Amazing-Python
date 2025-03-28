@@ -1,4 +1,4 @@
-# 🧠 Imiomics Visualization and Analysis Toolkit
+# Imiomics Visualization and Analysis Toolkit
 
 This repository provides tools to **analyze, visualize, and generate collages and videos** from *Imiomics statistical maps*, enabling voxel-wise anatomical insights from MRI data. It supports regression analysis, multiple comparison correction, reference alignment, and publication-ready outputs in both image and video formats.
 
@@ -9,7 +9,7 @@ This repository provides tools to **analyze, visualize, and generate collages an
 | File | Description |
 |------|-------------|
 | `collage_Imiomics.py` | Generate PNG collages from Imiomics statistical maps |
-| `imiomicsVideos.py` | Create axial and coronal videos (.mp4) of Imiomics maps |
+| `imiomicsVideos.py` | Create axial and coronal videos (.avi) of Imiomics maps |
 | `regression.py` | Voxel-wise linear/logistic regression to produce statistical NRRD maps |
 | `writeShell.py` | Generate shell scripts to run batch regression jobs |
 | `helper_collage.py` | Helper to retrieve and organize map files for collage generation |
@@ -140,4 +140,22 @@ Automate shell script creation for regression jobs on clusters like Bianca.
 - Includes map type, subject counts, and R² indicator
 
 ### `getParameterFiles.py`
-- Combi
+- Combines and sorts multiple ID and value arrays
+- Returns aligned, sorted inputs for regression
+
+---
+
+## 🔄 Full Example Workflow
+
+```bash
+# Generate collage
+python collage_Imiomics.py -i maps/ -f mri_masks/ -s small -v BMI
+
+# Generate videos
+python imiomicsVideos.py \
+  -m "maps/male/beta1_BMI_Jac_M.nrrd,maps/female/beta1_BMI_Jac_F.nrrd,maps/male/beta1_BMI_Fat_M.nrrd,maps/female/beta1_BMI_Fat_F.nrrd" \
+  -b "masks/male.vtk,masks/female.vtk" \
+  -r "ref/male_water.nrrd,ref/male_fat.nrrd,ref/female_water.nrrd,ref/female_fat.nrrd" \
+  -v BMI -f 1 -o output/
+```
+
